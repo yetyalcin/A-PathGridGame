@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6445369137074424163}
   - component: {fileID: 8050877520713292542}
+  - component: {fileID: 1671430212}
+  - component: {fileID: 1671430213}
   m_Layer: 0
   m_Name: Red Box
   m_TagString: Untagged
@@ -85,3 +87,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1671430212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867629905665062821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076f4aed44a2bdb4686e0621118175ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 1671430213}
+  Path: []
+  _currentNode: {fileID: 0}
+  _targetNode: {fileID: 0}
+--- !u!114 &1671430213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867629905665062821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5ede7ce22135946948df500440b940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.46151373
+      outSlope: 0.46151373
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.071544714
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.11603804
+      outSlope: 0.11603804
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.081300795
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  MovementComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1671430212}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMovementComplete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
