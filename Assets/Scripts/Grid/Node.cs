@@ -15,21 +15,25 @@ namespace Game.Grid
         [HideInInspector] public int hCost;
         [HideInInspector] public int fCost { get { return gCost + hCost; } }
 
-        private GlobalVariables.UnitType _fillType;
-        private GameObject _fillObj;
+        public GlobalVariables.UnitType FillType;
+        public GameObject FillObj;
 
-
-        private void Start()
+        private void Awake()
         {
             FindObjectOfType<GridSystem>().IsFilled += FillEvent;
         }
 
+        private void Start()
+        {
+            
+        }
+
         public void FillEvent(int x, int y,bool isFilled, GlobalVariables.UnitType type, GameObject obj)
         {
-            Debug.Log(IsFilled + this.transform.name);
+            //Debug.Log(IsFilled + this.transform.name);
             IsFilled = isFilled;
-            _fillType = type;
-            _fillObj = obj;
+            FillType = type;
+            FillObj = obj;
         }
     }
 }
